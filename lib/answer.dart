@@ -10,11 +10,17 @@ class Answer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: ElevatedButton(
-        onPressed: answerQuestion,
-        child: Text(answer),
-        style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all<Color>(Colors.red)),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+        child: SizedBox(
+          width: double.infinity,
+          child: ElevatedButton(
+            onPressed: answerQuestion,
+            child: Text(answer),
+            style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.blue[800])),
+          ),
+        ),
       ),
     );
   }
